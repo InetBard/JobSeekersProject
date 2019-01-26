@@ -17,8 +17,6 @@ public class MishpahugController {
 
 	@PostMapping("/user/registration")
 	public User addUser(@RequestHeader("Authorization") String token) {
-//	public User addUser(@PathVariable String login, @PathVariable String password) {
-//		return userService.addUser(userRegDTO);
 		return userService.addUser(token);
 	}
 	@PostMapping("/user/profile")
